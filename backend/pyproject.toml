@@ -1,0 +1,17 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Mehran Rahbardar", email = "mr7r@yahoo.com" }
+]
+dependencies = [
+    "fastapi[standard]>=0.115.4",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
