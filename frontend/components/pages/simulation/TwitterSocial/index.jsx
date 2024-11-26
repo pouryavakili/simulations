@@ -1,0 +1,19 @@
+import { Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import TweetList from "./TweetList";
+
+const TwitterSocial = () => {
+  return (
+    <Box sx={{ pt: 6, height : "100%" }}>
+      <Grid height={"100%"} container spacing={2}>
+        <Grid height={"100%"} item size={{ xs: 9 }}>
+          <TweetList />
+        </Grid>
+        <Grid item size={{ xs: 3 }}>
+          2
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+export default TwitterSocial;

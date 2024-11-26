@@ -1,3 +1,5 @@
+"use client";
+
 import { tabSimulation } from "@/utils/data";
 import { styled, Tab, Tabs, IconButton, Box } from "@mui/material";
 
@@ -10,7 +12,6 @@ function a11yProps(index) {
 
 // Styled Tabs (container)
 const TabsCustom = styled(Tabs)(({ theme }) => ({
-  minHeight : "auto",
   ".MuiTabs-indicator": {
     display: "none !important",
   },
@@ -22,23 +23,23 @@ const TabsCustom = styled(Tabs)(({ theme }) => ({
 
 // Styled Tab (individual tabs)
 const TabCustom = styled(Tab)(({ theme }) => ({
-  textTransform: "none", // Prevent uppercase
-  minWidth: 285, // Minimum width for each tab
-  borderRadius: theme.shape.borderRadius, // Rounded corners for tabs
-  padding: theme.spacing(0), // Padding inside tabs
+  textTransform: "none",
+  minWidth: 285, 
+  borderRadius: theme.shape.borderRadius,
+  padding: theme.spacing(0), 
   transition: "background-color 0.3s, color 0.3s",
-  display: "flex", // Ensure content aligns properly
-  justifyContent: "space-between", // Space out content (label, close button, etc.)
-  gap: theme.spacing(1), // Space between elements
-  alignItems: "center", // Center vertically
+  display: "flex", 
+  justifyContent: "space-between",
+  gap: theme.spacing(1),
+  alignItems: "center", 
   ".tabItem" : {
-    minHeight : theme.spacing(12),
+    minHeight : `${theme.spacing(12)} !important`,
     padding : theme.spacing(0 , 3),
   },
   "&.Mui-selected": {
     ".tabItem" : {
-      backgroundColor: "#FFF", // Active tab background
-      color: "#333", // Active tab text color
+      backgroundColor: "#FFF",
+      color: "#333",
       borderRadius : theme.spacing(2 , 2 , 0 , 0)
     }
   },
