@@ -1,5 +1,6 @@
 "use client";
 
+import Icon from "@/components/common/Icon";
 import { tabSimulation } from "@/utils/data";
 import { styled, Tab, Tabs, IconButton, Box } from "@mui/material";
 
@@ -102,7 +103,7 @@ const SimulationTab = ({
                   handleClose(index); 
                 }}
               >
-                x
+                <Icon name={"close"}/>
               </IconButton>
             </TabItem>
             {TabNumber === index && <img src="/images/shapRight.svg"/>}

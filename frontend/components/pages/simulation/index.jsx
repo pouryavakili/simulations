@@ -3,6 +3,7 @@ import { Box, styled } from "@mui/material";
 import SimulationTab from "./simulation-tab";
 import { useState } from "react";
 import TwitterSocial from "./TwitterSocial";
+import CharGPT from "./CharGPT";
 
 const SimulationBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#FFF",
@@ -16,6 +17,8 @@ const SimulationComponents = () => {
   const [tabNumber, setTabNumber] = useState(0);
 
   const handleChange = (event, newValue) => {
+    console.log(newValue);
+    
     setTabNumber(newValue);
   };
 
@@ -23,7 +26,7 @@ const SimulationComponents = () => {
     <SimulationBox>
       <SimulationTab TabNumber={tabNumber} handleChange={handleChange} />
       <Box sx={{ height : "calc(100% - 48px)" }}>
-        <TwitterSocial/>
+        {tabNumber == 0 ? <TwitterSocial handleChangeTabBar={handleChange}/> : tabNumber === 1 ? <CharGPT /> : ""}
       </Box>
     </SimulationBox>
   );

@@ -12,8 +12,10 @@
     "@emotion/cache": "^11.13.5",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
+    "@iconify-icon/react": "^2.1.0",
     "@mui/material": "^6.1.8",
     "@mui/material-nextjs": "^6.1.8",
+    "@mui/styles": "^6.1.9",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18"

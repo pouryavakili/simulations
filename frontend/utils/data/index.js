@@ -19,3 +19,21 @@ export const tabSimulation = [
         icon : "apollo.svg",
     },
 ]
+export const TweetInfoData = [
+    {
+        image : "comment.svg",
+        text : "22.4k"
+    },
+    {
+        image : "retweet.svg",
+        text : "22.4k"
+    },
+    {
+        image : "like.svg",
+        text : "22.4k"
+    },
+    {
+        image : "view.svg",
+        text : "22.4k"
+    },
+]

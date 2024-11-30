@@ -1,5 +1,6 @@
 import { Avatar, Box, styled, Typography } from "@mui/material"
 import TweetInfo from "./TweetInfo"
+import { TweetInfoData } from "@/utils/data"
 
 const TweetBox = styled(Box)(({theme}) => ({
     padding : theme.spacing(4 , 7.5),
@@ -29,11 +30,10 @@ const TweetItems = ({ avatar , text }) => {
                 <Typography>{text}</Typography>
             </TweetBoxFirst>
             <TweetBoxSecond>
-                <TweetInfo img={"/images/twitter/like.svg"}/>
-                <TweetInfo img={"/images/twitter/like.svg"}/>
-                <TweetInfo img={"/images/twitter/like.svg"}/>
-                <TweetInfo img={"/images/twitter/like.svg"}/>
-                <TweetInfo img={"/images/twitter/like.svg"}/>
+                {TweetInfoData.map((item , indx)=> {
+                    return <TweetInfo key={indx} text={item.text} image={item.image}/>
+                })}
+                <TweetInfo text="" image={"share.svg"}/>
             </TweetBoxSecond>
         </TweetBox>
     )
