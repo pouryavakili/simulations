@@ -79,7 +79,7 @@ const SimulationTab = ({
              className="tabItem"
               sx={{
                 display: "flex",
-                alignItems: "e",
+                alignItems: "center",
                 justifyContent: "space-between",
                 gap: "8px",
                 width: "100%",
@@ -96,15 +96,8 @@ const SimulationTab = ({
                 <span>{tab.title}</span>
               </Box>
               {/* Close Button */}
-              <IconButton
-                size="small"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleClose(index); 
-                }}
-              >
-                <Icon name={"close"}/>
-              </IconButton>
+                
+              <Icon size={"xs"} isCustomVariant name={"material-symbols:close-rounded"} />
             </TabItem>
             {TabNumber === index && <img src="/images/shapRight.svg"/>}
            </Box>

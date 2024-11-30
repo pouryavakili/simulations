@@ -35,7 +35,7 @@ const TweetList = () => {
     ]
     return(
         <Box sx={{height : "100%", px : 8 , overflowX: "auto"}}>
-            {list.map((item) => <TweetItems avatar={item.avatar} text={item.text}/>)}
+            {list.map((item , indx) => <TweetItems key={indx} avatar={item.avatar} text={item.text}/>)}
         </Box>
     )
 }

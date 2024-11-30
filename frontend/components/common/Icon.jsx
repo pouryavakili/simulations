@@ -3,7 +3,7 @@ import { Icon as Iconify } from '@iconify-icon/react';
 
 const Icon = ({ name, size, isCustomVariant, className , color = "#0D0D0D" }) => {
   const sizes = {
-    xs: 18,
+    xs: 14,
     sm: 22,
     md: 28,
     lg: 40,
