@@ -4,6 +4,7 @@ import SimulationTab from "./simulation-tab";
 import { useState } from "react";
 import TwitterSocial from "./TwitterSocial";
 import CharGPT from "./CharGPT";
+import Apollo from "./Apollo";
 
 const SimulationBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#FFF",
@@ -26,7 +27,7 @@ const SimulationComponents = () => {
     <SimulationBox>
       <SimulationTab TabNumber={tabNumber} handleChange={handleChange} />
       <Box sx={{ height : "calc(100% - 48px)" }}>
-        {tabNumber == 0 ? <TwitterSocial handleChangeTabBar={handleChange}/> : tabNumber === 1 ? <CharGPT /> : ""}
+        {tabNumber == 0 ? <TwitterSocial handleChangeTabBar={handleChange}/> : tabNumber === 1 ? <CharGPT /> : <Apollo/>}
       </Box>
     </SimulationBox>
   );
