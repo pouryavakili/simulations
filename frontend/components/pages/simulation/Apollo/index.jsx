@@ -1,7 +1,9 @@
 import { Box } from "@mui/material"
 import ApolloFirstHeader from "./ApolloFirstHeader"
 import ApolloDialog from "./ApolloDialog"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ApolloItem from "./ApolloItem";
+import { useApolloStore } from "@/store/Apollo/useApolloStore";
 
 const Apollo = () => {
     const [open, setOpen] = useState(false);
@@ -11,11 +13,20 @@ const Apollo = () => {
     const handleClose = () => {
       setOpen(false);
     };
-  
+    const { apolloListItems } = useApolloStore()
+    useEffect(() => {
+      console.log(apolloListItems);
+      
+    } , [apolloListItems])
     return(
-        <Box>
+        <Box sx={{ height : "100%" }}> 
             <ApolloFirstHeader handleClickOpenDialog={handleClickOpen}/>
             <ApolloDialog handleClose={handleClose} open={open}/>
+            <Box sx={{ height : '100%' , overflow : "auto" }}>
+              {apolloListItems.length && apolloListItems.map((item) => {
+                return <ApolloItem numberCustomer={item.number_customer} title={item.title}/>
+              })}
+            </Box>
         </Box>
     )
 }

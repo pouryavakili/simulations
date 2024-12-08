@@ -6,7 +6,13 @@ const initialState = {
     number_customer: 1,
     email_body: "",
   },
-  apolloListItems: []
+  apolloListItems: [
+    {
+        "title": "test",
+        "number_customer": 1,
+        "email_body": "test"
+    },
+]
 };
 
 // Define your Zustand store
