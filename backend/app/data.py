@@ -1,6 +1,6 @@
 mock_data = {
     "tweets": {
-        "f005dac7-32d8-40bc-bf77-2232b16a2e42": [
+        "f005dac7": [
             {
                 "bookmark_count": 3120,
                 "created_at": "Wed Dec 04 12:23:56 +0000 2024",
@@ -62,7 +62,7 @@ mock_data = {
                 "avatar": "https://picsum.photos/100",
             },
         ],
-        "b4465bc3-139d-4a07-94a1-d814f2a66275": [
+        "b4465bc3": [
             {
                 "bookmark_count": 3100,
                 "created_at": "Mon Dec 09 08:20:12 +0000 2024",
