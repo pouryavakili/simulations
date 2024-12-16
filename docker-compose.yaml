@@ -1,0 +1,30 @@
+services:
+    backend:
+        build: ./backend
+        ports:
+            - '127.0.0.1:8000:8000'
+        restart: always
+        container_name: backend
+        # env_file:
+        #   - ./envs/backend.env
+    frontend:
+        ports:
+            - '127.0.0.1:3000:3000'
+        restart: always
+        container_name: frontend
+        depends_on: 
+          - backend
+        build: ./frontend
+        # env_file:
+        #   - ./envs/frontend.env
+
+    nginx:
+      image: nginx:latest
+      container_name: nginx
+      ports:
+        - '80:80'
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      depends_on:
+        - backend
+        - frontend
