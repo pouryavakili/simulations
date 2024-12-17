@@ -20,10 +20,6 @@ export const useApolloStore = create((set) => ({
   ...initialState,
   valueDialog: initialState.valueDialog,
   apolloListItemsAdd : (value) => {
-    console.log(value);
-    console.log(...useApolloStore.getState().apolloListItems);
-    
     set({ apolloListItems : [ ...useApolloStore.getState().apolloListItems , value ] });
-    
   }
 }));

@@ -73,10 +73,6 @@ const ApolloDialog = ({ open, handleClose }) => {
     enableReinitialize: true,
   });
 
-  useEffect(() => {
-    console.log(apolloListItems);
-  } , [apolloListItems])
-
   // useEffect
   useEffect(() => {
     formik.setValues(valueDialog);

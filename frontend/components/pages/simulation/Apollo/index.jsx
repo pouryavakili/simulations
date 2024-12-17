@@ -14,10 +14,6 @@ const Apollo = () => {
       setOpen(false);
     };
     const { apolloListItems } = useApolloStore()
-    useEffect(() => {
-      console.log(apolloListItems);
-      
-    } , [apolloListItems])
     return(
         <Box sx={{ height : "100%" }}> 
             <ApolloFirstHeader handleClickOpenDialog={handleClickOpen}/>

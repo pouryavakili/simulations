@@ -1,3 +1,4 @@
+import { formatNumberWithUnit } from "@/utils/function"
 import { Box, styled, Typography } from "@mui/material"
 
 const TweetInfoBox = styled(Box)(({theme}) => ({
@@ -14,12 +15,12 @@ const TweetInfoBox = styled(Box)(({theme}) => ({
     }
 }))
 
-const TweetInfo = ({image="like.svg" , text = "22.4k"}) => {
+const TweetInfo = ({image , text}) => {
     return(
         <TweetInfoBox>
             <img src={`/images/twitter/${image}`}/>
             <Typography>
-                {text}
+                {formatNumberWithUnit(text)}
             </Typography>
         </TweetInfoBox>
     )

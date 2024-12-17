@@ -59,10 +59,7 @@ const SimulationTab = ({
   TabNumber = 1,
   handleChange = () => {
     return;
-  },
-  handleClose = (index) => {
-    console.log(`Close tab ${index}`);
-  },
+  }
 }) => {
   return (
     <TabsCustom

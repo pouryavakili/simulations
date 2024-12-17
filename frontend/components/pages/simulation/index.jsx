@@ -16,10 +16,8 @@ const SimulationBox = styled(Box)(({ theme }) => ({
 
 const SimulationComponents = () => {
   const [tabNumber, setTabNumber] = useState(0);
-
+ 
   const handleChange = (event, newValue) => {
-    console.log(newValue);
-    
     setTabNumber(newValue);
   };
 
